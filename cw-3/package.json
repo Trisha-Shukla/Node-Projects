@@ -1,0 +1,16 @@
+{
+  "name": "binary_search_by_trisha",
+  "version": "1.0.0",
+  "description": "Implementation of the Binary Search algorithm in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "binary",
+    "search"
+  ],
+  "author": "Trisha Shukla",
+  "license": "ISC"
+}

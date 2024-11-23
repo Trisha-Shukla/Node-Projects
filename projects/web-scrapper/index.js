@@ -46,7 +46,7 @@ const fetchData=async()=>{
             productData[index]["price"] = price;
             
         })
-        console.log(productData);
+        // console.log(productData);
         fs.writeFile("product.json",JSON.stringify(productData),(err)=>{
             if(err){
                 console.log("Error writingdata ",err);

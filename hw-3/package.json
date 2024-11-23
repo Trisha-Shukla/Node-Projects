@@ -1,0 +1,18 @@
+{
+  "name": "array-methods-by-trisha",
+  "version": "1.0.1",
+  "description": "With this package, you can easily perform common array operations like calculating the sum of all elements or removing duplicates from an array, without needing to write custom code every time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sum",
+    "remove",
+    "filter",
+    "average",
+    "median"
+  ],
+  "author": "Trisha Shukla",
+  "license": "ISC"
+}

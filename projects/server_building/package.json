@@ -1,0 +1,18 @@
+{
+  "name": "server_building",
+  "version": "1.0.0",
+  "description": "server building",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon express.js"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Trisha Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
