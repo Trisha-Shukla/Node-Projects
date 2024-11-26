@@ -1,1 +1,98 @@
-[{"title":"Samsung Galaxy A35 5G (Awesome Iceblue, 8GB RAM, 128GB Storage) | Premium Glass Back | 50 MP Main Camera (OIS) | Nightography | IP67 | Corning Gorilla Glass Victus+ | sAMOLED with Vision Booster","inStock":"In stock","price":"30,999","rating":"3.7"},{"title":"Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey","inStock":"In stock","price":"11,499","rating":"3.8"},{"title":"POCO M6 5G, Orion Blue (4GB, 64GB)","inStock":"In stock","price":"7,999","rating":"3.9"},{"title":"Redmi 13C 5G (Starlight Black, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display","inStock":"In stock","price":"9,199","rating":"4.0"},{"title":"OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)","inStock":"In stock","price":"17,999","rating":"4.1"},{"title":"Samsung Galaxy M05 (Mint Green, 4GB RAM, 64 GB Storage) | 50MP Dual Camera | Bigger 6.7\" HD+ Display | 5000mAh Battery | 25W Fast Charging | 2 Gen OS Upgrade & 4 Year Security Update | Without Charger","inStock":"In stock","price":"6,999","rating":"3.9"},{"title":"realme NARZO 70x 5G (Ice Blue, 6GB RAM,128GB Storage)|120Hz Ultra Smooth Display|Dimensity 6100+ 6nm 5G|50MP AI Camera|45W Charger in The Box","inStock":"In stock","price":"12,998","rating":"4.0"},{"title":"Apple iPhone 15 (128 GB) - Pink","inStock":"In stock","price":"65,900","rating":"4.5"},{"title":"itel Aura 05i (2GB RAM + 32GB ROM, Upto 4GB RAM with Memory Fusion | Type C Fast Charging | 6.6\" HD+ Display)- Nebula Black","inStock":"In stock","price":"5,549","rating":"3.6"},{"title":"HONOR X9b 5G (Midnight Black, 8GB + 256GB) | India's First Ultra-Bounce Anti-Drop Curved AMOLED Display | 5800mAh Battery | 108MP Primary Camera | Without Charger","inStock":"In stock","price":"24,998","rating":"3.5"},{"title":"realme NARZO N65 5G (Deep Green 4GB RAM, 128GB Storage) India's 1st D6300 5G Chipset | Ultra Slim 190g Design | 120Hz Eye Comfort Display | 50MP AI Camera| Charger in The Box","inStock":"In stock","price":"11,498","rating":"4.0"},{"title":"Lava O3 (Glossy Black, 4 GB RAM, 64 GB Storage) | Biggest 6.75\" HD+ Display | 13MP AI Dual Rear Camera | 5000 mAh Battery | Secure Face Unlock | Fingerprint Reader | Charger & Phone-Cover in Box","inStock":"In stock","price":"6,199","rating":"3.7"},{"title":"vivo Y28s 5G (Twinkling Purple, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers","inStock":"In stock","price":"14,999","rating":"4.4"},{"title":"POCO M6 5G (Galactic Black,6GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G Processor | 5000 mAh Battery + 18W Fast Charging | 50 MP AI Dual-Camera System & Side Fingerprint Sensor","inStock":"In stock","price":"9,999","rating":"3.8"},{"title":"Nokia 2660 Flip 4G Volte keypad Phone with Dual SIM, Dual Screen, inbuilt MP3 Player & Wireless FM Radio | Black","inStock":"In stock","price":"4,299","rating":"3.8"},{"title":"realme NARZO N61 (Marble Black, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box","inStock":"In stock","price":"7,499","rating":"4.0"}]
+[
+    {
+        "title": "Samsung Galaxy A35 5G (Awesome Iceblue, 8GB RAM, 128GB Storage) | Premium Glass Back | 50 MP Main Camera (OIS) | Nightography | IP67 | Corning Gorilla Glass Victus+ | sAMOLED with Vision Booster",
+        "inStock": "In stock",
+        "price": "30,999",
+        "rating": "3.7"
+    },
+    {
+        "title": "Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey",
+        "inStock": "In stock",
+        "price": "11,499",
+        "rating": "3.8"
+    },
+    {
+        "title": "POCO M6 5G, Orion Blue (4GB, 64GB)",
+        "inStock": "In stock",
+        "price": "7,999",
+        "rating": "3.9"
+    },
+    {
+        "title": "Redmi 13C 5G (Starlight Black, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display",
+        "inStock": "In stock",
+        "price": "9,199",
+        "rating": "4.0"
+    },
+    {
+        "title": "OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)",
+        "inStock": "In stock",
+        "price": "17,999",
+        "rating": "4.1"
+    },
+    {
+        "title": "Samsung Galaxy M05 (Mint Green, 4GB RAM, 64 GB Storage) | 50MP Dual Camera | Bigger 6.7\" HD+ Display | 5000mAh Battery | 25W Fast Charging | 2 Gen OS Upgrade & 4 Year Security Update | Without Charger",
+        "inStock": "In stock",
+        "price": "6,999",
+        "rating": "3.9"
+    },
+    {
+        "title": "realme NARZO 70x 5G (Ice Blue, 6GB RAM,128GB Storage)|120Hz Ultra Smooth Display|Dimensity 6100+ 6nm 5G|50MP AI Camera|45W Charger in The Box",
+        "inStock": "In stock",
+        "price": "12,998",
+        "rating": "4.0"
+    },
+    {
+        "title": "Apple iPhone 15 (128 GB) - Pink",
+        "inStock": "In stock",
+        "price": "65,900",
+        "rating": "4.5"
+    },
+    {
+        "title": "itel Aura 05i (2GB RAM + 32GB ROM, Upto 4GB RAM with Memory Fusion | Type C Fast Charging | 6.6\" HD+ Display)- Nebula Black",
+        "inStock": "In stock",
+        "price": "5,549",
+        "rating": "3.6"
+    },
+    {
+        "title": "HONOR X9b 5G (Midnight Black, 8GB + 256GB) | India's First Ultra-Bounce Anti-Drop Curved AMOLED Display | 5800mAh Battery | 108MP Primary Camera | Without Charger",
+        "inStock": "In stock",
+        "price": "24,998",
+        "rating": "3.5"
+    },
+    {
+        "title": "realme NARZO N65 5G (Deep Green 4GB RAM, 128GB Storage) India's 1st D6300 5G Chipset | Ultra Slim 190g Design | 120Hz Eye Comfort Display | 50MP AI Camera| Charger in The Box",
+        "inStock": "In stock",
+        "price": "11,498",
+        "rating": "4.0"
+    },
+    {
+        "title": "Lava O3 (Glossy Black, 4 GB RAM, 64 GB Storage) | Biggest 6.75\" HD+ Display | 13MP AI Dual Rear Camera | 5000 mAh Battery | Secure Face Unlock | Fingerprint Reader | Charger & Phone-Cover in Box",
+        "inStock": "In stock",
+        "price": "6,199",
+        "rating": "3.7"
+    },
+    {
+        "title": "vivo Y28s 5G (Twinkling Purple, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers",
+        "inStock": "In stock",
+        "price": "14,999",
+        "rating": "4.4"
+    },
+    {
+        "title": "POCO M6 5G (Galactic Black,6GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G Processor | 5000 mAh Battery + 18W Fast Charging | 50 MP AI Dual-Camera System & Side Fingerprint Sensor",
+        "inStock": "In stock",
+        "price": "9,999",
+        "rating": "3.8"
+    },
+    {
+        "title": "Nokia 2660 Flip 4G Volte keypad Phone with Dual SIM, Dual Screen, inbuilt MP3 Player & Wireless FM Radio | Black",
+        "inStock": "In stock",
+        "price": "4,299",
+        "rating": "3.8"
+    },
+    {
+        "title": "realme NARZO N61 (Marble Black, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box",
+        "inStock": "In stock",
+        "price": "7,499",
+        "rating": "4.0"
+    }
+]
