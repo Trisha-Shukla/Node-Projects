@@ -1,0 +1,18 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "Project and topics are covered",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon image_url/index.js"
+  },
+  "keywords": [
+    "project"
+  ],
+  "author": "Trisha Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
