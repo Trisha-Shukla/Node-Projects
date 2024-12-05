@@ -1,0 +1,168 @@
+[
+    {
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "price": 25.99,
+      "brand": "LogiTech",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "name": "Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 45.99,
+      "brand": "Sony",
+      "inStock": true,
+      "rating": 4.8
+    },
+    {
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 15.99,
+      "brand": "FitPro",
+      "inStock": true,
+      "rating": 4.2
+    },
+    {
+      "name": "Water Bottle",
+      "category": "Fitness",
+      "price": 10.99,
+      "brand": "Hydro Flask",
+      "inStock": true,
+      "rating": 4.7
+    },
+    {
+      "name": "Office Chair",
+      "category": "Furniture",
+      "price": 125.99,
+      "brand": "ErgoChair",
+      "inStock": false,
+      "rating": 4.3
+    },
+    {
+      "name": "Standing Desk",
+      "category": "Furniture",
+      "price": 325.99,
+      "brand": "FlexiSpot",
+      "inStock": true,
+      "rating": 4.6
+    },
+    {
+      "name": "Cooking Pan",
+      "category": "Kitchen",
+      "price": 22.99,
+      "brand": "T-Fal",
+      "inStock": true,
+      "rating": 4.4
+    },
+    {
+      "name": "Knife Set",
+      "category": "Kitchen",
+      "price": 45.99,
+      "brand": "Cuisinart",
+      "inStock": true,
+      "rating": 4.8
+    },
+    {
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 699.99,
+      "brand": "Samsung",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 999.99,
+      "brand": "Dell",
+      "inStock": false,
+      "rating": 4.7
+    },
+    {
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "price": 65.99,
+      "brand": "Nike",
+      "inStock": true,
+      "rating": 4.6
+    },
+    {
+      "name": "Sunglasses",
+      "category": "Accessories",
+      "price": 85.99,
+      "brand": "Ray-Ban",
+      "inStock": true,
+      "rating": 4.9
+    },
+    {
+      "name": "Wristwatch",
+      "category": "Accessories",
+      "price": 199.99,
+      "brand": "Fossil",
+      "inStock": false,
+      "rating": 4.4
+    },
+    {
+      "name": "Backpack",
+      "category": "Bags",
+      "price": 49.99,
+      "brand": "North Face",
+      "inStock": true,
+      "rating": 4.8
+    },
+    {
+      "name": "Electric Toothbrush",
+      "category": "Health",
+      "price": 39.99,
+      "brand": "Oral-B",
+      "inStock": true,
+      "rating": 4.7
+    },
+    {
+      "name": "Gaming Console",
+      "category": "Electronics",
+      "price": 499.99,
+      "brand": "Sony",
+      "inStock": true,
+      "rating": 4.8
+    },
+    {
+      "name": "Board Game",
+      "category": "Toys",
+      "price": 25.99,
+      "brand": "Hasbro",
+      "inStock": true,
+      "rating": 4.6
+    },
+    {
+      "name": "Electric Kettle",
+      "category": "Kitchen",
+      "price": 35.99,
+      "brand": "Hamilton Beach",
+      "inStock": true,
+      "rating": 4.5
+    },
+    {
+      "name": "Vacuum Cleaner",
+      "category": "Home Appliances",
+      "price": 155.99,
+      "brand": "Dyson",
+      "inStock": false,
+      "rating": 4.7
+    },
+    {
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 299.99,
+      "brand": "Apple",
+      "inStock": true,
+      "rating": 4.8
+    },
+    {
+      "name": "Graphic Tablet",
+      "category": "Electronics",
+      "price": 199.99,
+      "brand": "W"
+    }  
+]
