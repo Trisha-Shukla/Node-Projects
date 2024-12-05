@@ -11,5 +11,5 @@ await connectToDB();
 
 app.listen(port,()=>{console.log("Connected to Server");
 })
-app.use(cors({origin:"http://localhost:5173"}))
+app.use(cors({origin:"https://node-projects-ts.onrender.com"}))
 app.use("/api",router)

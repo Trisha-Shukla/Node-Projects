@@ -33,7 +33,7 @@ function App() {
     formData.append("price",form.price)
     formData.append("image",form.image)
 
-    const response=await axios.post("http://localhost:8080/api/add",formData);
+    const response=await axios.post("https://image-uploading-ts.onrender.com/api/add",formData);
     console.log(response.data)
   }
 
