@@ -2,6 +2,7 @@ import express from "express"
 import multer from "multer";
 import addImage from "../controllers/addImage.js";
 import path from "path";
+import { getBooks } from "../controllers/books.js";
 
 const router=express.Router();
 // const storage = multer.diskStorage({
@@ -20,6 +21,7 @@ const router=express.Router();
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
+router.get('/get/books',getBooks);
 router.post('/add',upload.single("image"),addImage);
 
 export default router;
