@@ -88,12 +88,15 @@ const storage = multer.diskStorage({
   export async function sendEmail(req, res) {
       try {
           const { uuid, emailFrom, emailTo } = req.body;
+          console.log(req.body);
+          
   
           // Find file using UUID
-          const file = await FileSharing.findById(uuid);
-          if (!file) {
-              return res.status(404).send({ message: "File not found" });
-          }
+          await FileSharing.findByIdAndUpdate(
+            uuid,
+            { sender: emailFrom, reciever: emailTo },
+            { new: true, runValidators: true }
+        );
   
           const downloadLink = `http://localhost:3000/api/fileSharing/download/${uuid}`;
   
