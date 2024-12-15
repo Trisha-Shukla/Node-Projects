@@ -51,7 +51,7 @@ const storage = multer.diskStorage({
         const file=await FileSharing.findById(uuid);
         console.log(file);
         if(file){
-            const downloadLink=`http://localhost:3000/api/fileSharing/download/${uuid}`;
+            const downloadLink=`https://file-sharing-app-ts.onrender.com/api/fileSharing/download/${uuid}`;
             res.status(201).send({
                 url:downloadLink
             })
@@ -97,7 +97,7 @@ const storage = multer.diskStorage({
             { new: true, runValidators: true }
         );
   
-          const downloadLink = `http://localhost:3000/api/fileSharing/download/${uuid}`;
+          const downloadLink = `https://file-sharing-app-ts.onrender.com/api/fileSharing/download/${uuid}`;
   
           // Setup Nodemailer transporter
           const transporter = nodemailer.createTransport({
