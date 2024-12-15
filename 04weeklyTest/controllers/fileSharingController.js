@@ -91,7 +91,6 @@ const storage = multer.diskStorage({
           console.log(req.body);
           
   
-          // Find file using UUID
           await FileSharing.findByIdAndUpdate(
             uuid,
             { sender: emailFrom, reciever: emailTo },
@@ -109,7 +108,7 @@ const storage = multer.diskStorage({
               },
           });
   
-          // Email options
+          
           const mailOptions = {
               from: emailFrom,
               to: emailTo,
@@ -123,7 +122,7 @@ const storage = multer.diskStorage({
               `,
           };
   
-          // Send email
+          
           await transporter.sendMail(mailOptions);
   
           res.status(200).send({ message: "Email sent successfully!" });
