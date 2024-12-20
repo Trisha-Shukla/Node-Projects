@@ -3,17 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-import { Home, Login, ProtectedRoute, Register } from './components'
+import { Home, Layout, Login, ProtectedRoute, Register } from './components'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <Router>
      <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Layout/>}>
+      <Route path='' element={<Home/>}/>
+      <Route path='/profile' element={<ProtectedRoute/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
-      <Route path='/profile' element={<ProtectedRoute/>}/>
+      </Route>
      </Routes>
     </Router>
   )

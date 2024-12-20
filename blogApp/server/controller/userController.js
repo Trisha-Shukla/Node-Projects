@@ -5,8 +5,9 @@ import User from "../model/userModel.js";
 import jwt from "jsonwebtoken";
 
 export async function register(req, res) {
+
   const { name, username, email, phone, gender } = req.body;
-  //   console.log(req.body);
+    console.log(req.body);
   try {
     //check if username exists
     const existingUsername = await User.findOne({ username });
@@ -124,4 +125,9 @@ export async function login(request, response) {
     }
   }
 
-
+export function logout(req,res){
+  console.log("reached logout");
+  
+  res.clearCookie("token");
+  res.status(201).send({message:"Logout succesfully!!"})
+}

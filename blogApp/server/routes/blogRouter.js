@@ -9,6 +9,7 @@ import {
   
 } from "../controller/blogController.js";
 import multer from "multer";
+import { protectRoute } from "../middleware/auth.js";
 
 
 
@@ -18,10 +19,10 @@ const blogRouter = express.Router();
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
-blogRouter.post("/add", upload.single("image"), addBlog);
+blogRouter.post("/add", protectRoute,upload.single("image"), addBlog);
 blogRouter.get("/get", getBlogs);
 blogRouter.get("/get/:id", getBlog);
 blogRouter.delete("/delete/:id", deleteBlog);
-blogRouter.put("/update/:id", updateBlog);
+blogRouter.put("/update/:id",protectRoute, updateBlog);
 
 export default blogRouter;
