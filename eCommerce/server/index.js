@@ -16,7 +16,7 @@ app.use(urlencoded({}));
 
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://geekecommerce.onrender.com",
     credentials: true,  //This allows the server to accept cookies
     methods: "GET,POST,PUT,DELETE,PATCH",
     allowedHeaders: ["Content-Type", "Authorization"],
