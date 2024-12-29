@@ -34,6 +34,7 @@ const Header = () => {
         <Link to={'/'}>Geekster <span className='text-purple-800 text-2xl'>Ecom</span></Link>
         <div className='flex justify-between gap-6'>
             <Link to={'/contact'}>Contact Us</Link>
+            <Link to={'/register-seller'}>Register Seller</Link>
             {
               !isAuthenticated?(
                 <Link to={'/login'}>Login</Link>
