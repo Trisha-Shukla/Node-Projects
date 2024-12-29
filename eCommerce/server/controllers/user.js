@@ -110,6 +110,8 @@ export async function registerSeller(req, res) {
 
 
 export async function login(request, response) {
+  console.log("reached login");
+  
     const { username, password } = request.body;
     console.log(request.body);
     // console.log("reached login");
