@@ -1,13 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import instance from "../../axios.config";
 
-// Async Thunks for API calls
+
 export const checkAuth = createAsyncThunk("auth/checkAuth", async (_, thunkAPI) => {
   try {
-    // const token = localStorage.getItem("authToken");
-    //   if (!token) {
-    //     return { isAuthenticated: false };
-    //   }
+    
     const response = await instance.get("/auth/validate-token", { withCredentials: true });
     console.log("Reached here");
     
@@ -29,7 +26,7 @@ export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   }
 });
 
-// Slice
+
 const authSlice = createSlice({
   name: "auth",
   initialState: {
