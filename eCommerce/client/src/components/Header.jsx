@@ -1,13 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../context/context'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCart } from '../store/cartSlice/cartSlice';
+import { logout } from '../store/authSlice/authSlice';
+import { IoIosSettings } from "react-icons/io";
 
 const Header = () => {
   const cart=useSelector((state)=>state.cart.cart)
-  console.log(cart);
+  const user=useSelector((state)=>state.auth.user)
+  console.log("Header Rendered");
+  const [visible,setVisible]=useState(false)
   const dispatch=useDispatch()
+
+  const handleSetting=()=>{
+    setVisible(!visible)
+  }
   let cartLength=0;
   if(cart){
      cartLength=cart.items.reduce((acc,item)=> acc+item.quantity,0)
@@ -15,10 +22,9 @@ const Header = () => {
   }
   
   
-  console.log("Header Rendered");
   const isAuthenticated= useSelector((state)=> state.auth.isAuthenticated)
   const handleLogout=async()=>{
-    await logout();
+    dispatch(logout())
   }
   useEffect(()=>{
     dispatch(fetchCart());
@@ -32,7 +38,7 @@ const Header = () => {
               !isAuthenticated?(
                 <Link to={'/login'}>Login</Link>
               ):
-              (<>
+              (<div className='flex gap-4 items-center'>
                 <Link to="/cart" className="relative">
                 Cart{" "}
                 {(cart && cartLength> 0) && (
@@ -40,11 +46,30 @@ const Header = () => {
                     {cartLength}
                   </span>
                 )}
-              </Link>              
-                <Link to={'/add-product'}>Add Product</Link>                
-                <Link to={'/profile'}>Profile</Link>    
-                <button onClick={handleLogout}>Logout</button>            
-              </>
+              </Link>      
+              <div className='relative'>
+              <IoIosSettings onClick={handleSetting}/>
+                <div className=''>
+                  {
+                    (visible && ( <div className='flex flex-col gap-3 absolute top-3 right-4 bg-gray-100 text-purple-700'>
+                      {user?.role==="seller" && (
+                      <>
+                      <Link to={`/my-products/${data._id}`}>My products</Link>
+                      <Link to={'/add-product'}>Add Product</Link>  
+                      </>)}
+                      
+                      
+                      <Link to={'/profile'}>Profile</Link>  
+                      <Link>My Orders</Link>
+                      <Link to={'/wishlist'}>Wishlist</Link>
+
+                      <button onClick={handleLogout}>Logout</button>            </div> ))
+                  }
+                </div>
+              
+                </div>        
+                
+              </div>
               )
             }
         </div>

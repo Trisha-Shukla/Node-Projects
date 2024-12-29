@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
 import instance from "../axios.config";
 import ProductCard from "../components/ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { getProduct } from "../store/productSlice/productSlice";
+
 
 
 function Home() {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const dispatch=useDispatch()
+  const products=useSelector((state)=> state.product.products);
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
+    dispatch(getProduct());
   }, []);
 
   async function fetchData() {

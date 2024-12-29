@@ -233,15 +233,26 @@ export async function addToWishList(req,res){
   try {
     const {productId}=req.body;
     const userId=req.user._id;
+  console.log("reached add to");
   
    const user= await Users.findById(userId);
+   console.log(user);
+   
    if(user.wishlist.includes(productId)){
     return res.status(400).send({message:"Product already in a wishlist"})
    }
+
+   console.log("reached push");
+   user.wishlist.push(productId)
+   
+   console.log(user);
+   
+   await user.save(); // Save the changes
   
-   await Users.findByIdAndUpdate(userId,{
-    $push:{wishlist:productId}
-   })
+  //  await Users.findByIdAndUpdate(userId,{
+  //   $push:{wishlist:productId}
+  //  })
+  //  await user.populate("wishlist");
    res.status(200).send({message:"Product added to wishList succesfully!!"})
   } catch (error) {
     res.status(500).send({message:"Error adding product",error})
@@ -263,6 +274,7 @@ try {
   await Users.findByIdAndUpdate(userId, {
     $pull: { wishlist: productId }
   });
+  
 
   res.status(200).send({ message: "Product removed from wishlist successfully!" });
 } catch (error) {

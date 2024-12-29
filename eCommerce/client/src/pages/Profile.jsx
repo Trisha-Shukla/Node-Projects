@@ -46,7 +46,7 @@ function Profile() {
     <>
       {message && <h3>{message}</h3>}
       <div id="profile">
-        <aside>
+        {/* <aside>
           <ul>
             <li className="active">
               <Link>Personal Details</Link>
@@ -63,7 +63,7 @@ function Profile() {
               </li>
             )}
           </ul>
-        </aside>
+        </aside> */}
         <main>
           {data.name && (
             <form action="" onSubmit={handleSubmit}>

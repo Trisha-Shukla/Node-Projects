@@ -8,6 +8,8 @@ import ProtectedRoute from './components/ProtectedRoute'
 import VerifyEmail from './components/VerifyEmail'
 import { useDispatch, useSelector } from 'react-redux'
 import { checkAuth } from './store/authSlice/authSlice'
+import Wishlist from './pages/Wishlist'
+import { getProduct } from './store/productSlice/productSlice'
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   const isAuthenticated=useSelector((state)=>state.auth.isAuthenticated)
   useEffect(() => {
     dispatch(checkAuth());
+    dispatch(getProduct())
   }, [dispatch]);
   return (
     <Router>
@@ -29,6 +32,7 @@ function App() {
           <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
           <Route path='/product/:id' element={<ProtectedRoute><SingleProduct/></ProtectedRoute>}/>
           <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>}/>
+          <Route path='/wishlist' element={<ProtectedRoute><Wishlist/></ProtectedRoute>}/>
           {/* <Route path='' element={<Home/>}/> */}
         </Route>
       </Routes>
