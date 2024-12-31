@@ -26,6 +26,16 @@ This is an eCommerce platform API built using Node.js. The API provides function
   - [Delete Cart](#15-delete-cart)
   - [Verify Token](#16-verify-token)
   - [Validate Token](#17-validate-token)
+  - [Create Coupon](#18-create-coupon)
+  - [Get Coupon](#19-get-coupon)
+  - [Apply Coupon](#20-apply-coupon)
+  - [Payment Integration](#21-payment-integration)
+  - [Create Order](#22-create-order)
+  - [Add Blog](#23-add-blog)
+  - [Get All Blog](#24-get-all-blog)
+  - [Get A Blog](#25-get-a-blog)
+  - [Delete A Blog](#26-delete-a-blog)
+  - [Update A Blog](#27-update-a-blog)
 
 
 ## API Endpoints
@@ -530,6 +540,309 @@ Content-Type: application/json
     "email": "johndoe@example.com"
   },
   "isAuthenticated": true
+}
+
+### 18. Get Coupon
+
+- **Endpoint:** `GET /api/coupons/`
+- **Description:** Retrieves a list of all available coupons for the authenticated user.
+
+**Example Request:**
+
+GET /api/coupons/ HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "couponId": "123",
+    "code": "SAVE20",
+    "discount": 20,
+    "validTill": "2024-12-31T23:59:59Z"
+  },
+  {
+    "couponId": "124",
+    "code": "FREEDEL",
+    "discount": 100,
+    "validTill": "2024-01-31T23:59:59Z"
+  }
+]
+### 19. Create Coupon
+
+- **Endpoint:** `POST /api/coupons/create`
+- **Description:** Allows a seller to create a new coupon.
+
+**Example Request:**
+
+POST /api/coupons/create HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+Content-Type: application/json
+
+{
+  "code": "SAVE30",
+  "discount": 30,
+  "validTill": "2024-12-31T23:59:59Z"
+}
+
+
+
+**Example  Response:**
+
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "message": "Coupon created successfully",
+  "coupon": {
+    "couponId": "125",
+    "code": "SAVE30",
+    "discount": 30,
+    "validTill": "2024-12-31T23:59:59Z"
+  }
+}
+
+### 20. Apply Coupon
+
+- **Endpoint:** `POST /api/coupons/apply`
+- **Description:** Applies a coupon to the authenticated user's cart.
+
+**Example Request:**
+
+POST /api/coupons/apply HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+Content-Type: application/json
+
+{
+  "code": "SAVE20"
+}
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "Coupon applied successfully",
+  "discount": 20,
+  "cartTotal": 80
+}
+
+### 21. Payment Integration
+
+- **Endpoint:** `POST /api/payments/create-payment-intent`
+- **Description:** Creates a payment intent to process a payment. This endpoint interacts with the payment gateway (e.g., Stripe) to generate a client secret for payment processing.
+
+**Example Request:**
+
+POST /api/payments/create-payment-intent HTTP/1.1
+Host: your-domain.com
+Content-Type: application/json
+
+{
+  "amount": 1000,  // Amount in cents (e.g., $10.00)
+  "currency": "usd"
+}
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "clientSecret": "pi_1JH9Xs2eZvKYlo2CQaDWT85A_secret_uPE8HVapIxePhh"
+}
+
+### 22. Create Order
+
+- **Endpoint:** `POST /api/orders/create`
+- **Description:** Creates a new order for the authenticated user based on their cart and payment status.
+
+**Example Request:**
+
+POST /api/orders/create HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+Content-Type: application/json
+
+{
+  "cartId": "67890",
+  "paymentIntentId": "pi_1JH9Xs2eZvKYlo2CQaDWT85A"
+}
+
+
+
+**Example  Response:**
+
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "message": "Order created successfully",
+  "order": {
+    "orderId": "123456",
+    "cartId": "67890",
+    "totalAmount": 100.00,
+    "paymentStatus": "Paid",
+    "createdAt": "2024-12-29T12:34:56Z"
+  }
+}
+### 23. Add Blog
+
+- **Endpoint:** `POST /api/blogs/add`
+- **Description:** Adds a new blog post. This endpoint allows authenticated users to upload a blog post with an optional image..
+
+**Example Request:**
+
+POST /api/blogs/add HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+Content-Type: multipart/form-data
+
+{
+  "title": "My First Blog",
+  "content": "This is the content of the blog.",
+  "image": <file>  // Upload an image file
+}
+
+
+
+
+**Example  Response:**
+
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "message": "Blog added successfully",
+  "blog": {
+    "blogId": "1",
+    "title": "My First Blog",
+    "content": "This is the content of the blog.",
+    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "createdAt": "2024-12-29T12:34:56Z"
+  }
+}
+
+### 24. Get Blog
+
+- **Endpoint:** `GET /api/blogs/get`
+- **Description:** Retrieves a list of all blogs.
+
+**Example Request:**
+
+GET /api/blogs/get HTTP/1.1
+Host: your-domain.com
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "blogId": "1",
+    "title": "My First Blog",
+    "content": "This is the content of the blog.",
+    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "createdAt": "2024-12-29T12:34:56Z"
+  },
+  {
+    "blogId": "2",
+    "title": "My Second Blog",
+    "content": "This is the content of another blog.",
+    "imageUrl": null,
+    "createdAt": "2024-12-30T09:45:00Z"
+  }
+]
+
+### 25. Get Blog details
+
+- **Endpoint:** `GET /api/blogs/get/:id`
+- **Description:** Retrieves details of a specific blog post by ID.
+
+**Example Request:**
+
+GET /api/blogs/get/1 HTTP/1.1
+Host: your-domain.com
+
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "blogId": "1",
+  "title": "My First Blog",
+  "content": "This is the content of the blog.",
+  "imageUrl": "https://your-domain.com/uploads/image.jpg",
+  "createdAt": "2024-12-29T12:34:56Z"
+}
+
+### 26. Delete Blog
+
+- **Endpoint:** `DELETE /api/blogs/delete/:id`
+- **Description:** Deletes a blog post by ID.
+
+**Example Request:**
+
+DELETE /api/blogs/delete/1 HTTP/1.1
+Host: your-domain.com
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "Blog deleted successfully"
+}
+
+### 27. Update Blog
+
+- **Endpoint:** `PUT /api/blogs/update/:id`
+- **Description:** Updates a blog post by ID. Only authenticated users can update a blog.
+
+**Example Request:**
+
+PUT /api/blogs/update/1 HTTP/1.1
+Host: your-domain.com
+Authorization: Bearer your_jwt_token
+Content-Type: application/json
+
+{
+  "title": "Updated Blog Title",
+  "content": "Updated blog content."
+}
+
+
+
+**Example  Response:**
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "Blog updated successfully",
+  "blog": {
+    "blogId": "1",
+    "title": "Updated Blog Title",
+    "content": "Updated blog content.",
+    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "updatedAt": "2024-12-29T14:00:00Z"
+  }
 }
 
 
