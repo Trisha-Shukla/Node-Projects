@@ -3,7 +3,6 @@ import { Link, Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import instance from "../axios.config";
-import { useAuth } from "../context/context";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../store/authSlice/authSlice";
 
