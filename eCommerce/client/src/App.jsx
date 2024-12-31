@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import { AddProduct, Cart, Home, Layout, Login, Profile, Register,RegisterSeller, SingleProduct } from './pages'
+import { AddProduct, Cart, Contact, Home, Layout, Login, Profile, Register,RegisterSeller, SingleProduct } from './pages'
 import ProtectedRoute from './components/ProtectedRoute'
 import VerifyEmail from './components/VerifyEmail'
 import { useDispatch} from 'react-redux'
@@ -13,6 +13,7 @@ import MyCoupons from './pages/MyCoupon'
 import CheckoutForm from './pages/CheckoutForm'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
+import OrderSuccess from './pages/OrderSuccess;'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/' element={<Elements stripe={StripePromise}><Layout/></Elements>}>
           <Route index element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/contact' element={<Contact/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/register-seller' element={<RegisterSeller/>}/>
           <Route path='/verify-email' element={<VerifyEmail/>}/>
@@ -40,6 +42,7 @@ function App() {
           <Route path='/my-coupons' element={<ProtectedRoute><MyCoupons/></ProtectedRoute>}/>
           <Route path='/my-coupons/add' element={<ProtectedRoute><CreateCoupons/></ProtectedRoute>}/>
           <Route path='/checkout' element={<ProtectedRoute><CheckoutForm/></ProtectedRoute>}/>
+          <Route path='/order-success' element={<ProtectedRoute><OrderSuccess/></ProtectedRoute>}/>
           {/* <Route path='' element={<Home/>}/> */}
         </Route>
       </Routes>

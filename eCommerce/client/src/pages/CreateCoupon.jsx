@@ -88,7 +88,7 @@ function CreateCoupons() {
 
       <button
         type="submit"
-        className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600"
+        className="w-full bg-purple-400 text-white py-2 rounded hover:bg-purple-600"
       >
         Create Coupon
       </button>

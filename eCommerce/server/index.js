@@ -9,6 +9,7 @@ import authRouter from "./routes/authRouter.js";
 import cartRouter from "./routes/cartRouter.js";
 import couponRouter from "./routes/couponRouter.js";
 import paymentRouter from "./routes/paymentRouter.js";
+import orderRouter from "./routes/orderRouter.js";
 
 
 
@@ -19,8 +20,8 @@ app.use(urlencoded({}));
 
 
 const corsOptions = {
-    // origin: "https://geekecommerce.onrender.com",
-    origin: "http://localhost:5173",
+    origin: "https://geekecommerce.onrender.com",
+    // origin: "http://localhost:5173",
     credentials: true,  //This allows the server to accept cookies
     methods: "GET,POST,PUT,DELETE,PATCH",
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -34,6 +35,7 @@ app.use("/api/auth",authRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/coupon",couponRouter)
 app.use("/api/pay", paymentRouter);
+app.use("/api/orders", orderRouter);
 
 
 await connectToDB();

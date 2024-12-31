@@ -2,7 +2,8 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import instance from "../axios.config";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCart } from "../store/cartSlice/cartSlice";
 
 function CheckoutForm() {
   const stripe = useStripe();
@@ -15,6 +16,7 @@ function CheckoutForm() {
   const [success, setSuccess] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch=useDispatch();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -36,23 +38,24 @@ function CheckoutForm() {
           card: elements.getElement(CardElement),
         },
       });
-
+      console.log(result)
       if (result.error) {
         setError(result.error.message);
       } else if (result.paymentIntent.status === "succeeded") {
         setSuccess(true);
 
         // Call backend to create order
-        // await instance.post("/orders/create", {
-        //   paymentIntentId: result.paymentIntent.id,
-        // });
+        await instance.post("/orders/create", {
+          paymentIntentId: result.paymentIntent.id,
+        });
+        dispatch(fetchCart())
 
         navigate("/order-success");
         
       }
     } catch (error) {
       console.log(error);
-      if(error.response.data.message==="Error processing payment")setError("Payment failed. Please try again.");
+      if(error?.response?.data?.message==="Error processing payment")setError("Payment failed. Please try again.");
       
     } finally {
       setLoading(false);

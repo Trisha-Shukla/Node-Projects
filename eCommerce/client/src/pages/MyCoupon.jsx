@@ -45,7 +45,7 @@ function MyCoupons() {
       <div className="text-right">
         <Link
           to="/my-coupons/add"
-          className="bg-red-500 text-white px-8 py-2 rounded"
+          className="bg-purple-400 text-white px-8 py-2 rounded"
         >
           Add Coupon
         </Link>
