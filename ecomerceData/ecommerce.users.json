@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "name": "trisha",
+  "username": "trisha",
+  "email": "tshukla025@gmail.com",
+  "password": "$2b$10$d6oMNdbLIdpYGeZIoYAo4.S27orpgXJuNwpiyWBwmOG.kQuig5Xsa",
+  "phone": 8827361143,
+  "isEmailVerified": true,
+  "role": "buyer",
+  "wishlist": [],
+  "gender": "female",
+  "createdAt": {
+    "$date": "2024-12-25T10:05:39.442Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T14:08:30.212Z"
+  },
+  "__v": 10
+},
+{
+  "_id": {
+    "$oid": "676bd91e77f59ed3b1d3d6d4"
+  },
+  "name": "trisha",
+  "username": "trsha",
+  "email": "tshukla25@gmail.com",
+  "password": "$2b$10$pFa.FcFekGGWQEulNkvK1.h24HpuKTYlfEgi3IIj39egVCUduOT8i",
+  "phone": 8827361142,
+  "isEmailVerified": false,
+  "role": "seller",
+  "wishlist": [],
+  "gender": "female",
+  "createdAt": {
+    "$date": "2024-12-25T10:06:22.510Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-25T10:08:31.086Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676bd95577f59ed3b1d3d6d8"
+  },
+  "name": "trisha",
+  "username": "tsha",
+  "email": "tshukl25@gmail.com",
+  "password": "$2b$10$XZQe038zCesvyyv7k6She.wDCtyiZMr5BYxo.BwghfgKxRTBSM9Iq",
+  "phone": 8827361142,
+  "isEmailVerified": false,
+  "role": "seller",
+  "wishlist": [],
+  "gender": "female",
+  "createdAt": {
+    "$date": "2024-12-25T10:07:17.248Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-25T10:07:17.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676bda9177f59ed3b1d3d6e4"
+  },
+  "name": "trisha",
+  "username": "trishaa",
+  "email": "sachishukla7@gmail.com",
+  "password": "$2b$10$9ZuYjMq6e1RwmdxWA4VA0.BBn1R4MN8ztaPbfoQfaHt.JHd8b/tJO",
+  "phone": 8827361142,
+  "isEmailVerified": false,
+  "role": "seller",
+  "wishlist": [],
+  "gender": "female",
+  "createdAt": {
+    "$date": "2024-12-25T10:12:33.933Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-25T10:12:33.933Z"
+  },
+  "__v": 0
+}]

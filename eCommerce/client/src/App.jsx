@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react'
 import './App.css'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import { AddProduct, Cart, Home, Layout, Login, Profile, Register,RegisterSeller, SingleProduct } from './pages'
 import ProtectedRoute from './components/ProtectedRoute'
 import VerifyEmail from './components/VerifyEmail'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { checkAuth } from './store/authSlice/authSlice'
 import Wishlist from './pages/Wishlist'
 import { getProduct } from './store/productSlice/productSlice'
+import CreateCoupons from './pages/CreateCoupon'
 
 
 function App() {
   const dispatch=useDispatch();
-  const isAuthenticated=useSelector((state)=>state.auth.isAuthenticated)
+
   useEffect(() => {
     dispatch(checkAuth());
     dispatch(getProduct())
@@ -33,6 +32,8 @@ function App() {
           <Route path='/product/:id' element={<ProtectedRoute><SingleProduct/></ProtectedRoute>}/>
           <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>}/>
           <Route path='/wishlist' element={<ProtectedRoute><Wishlist/></ProtectedRoute>}/>
+          <Route path='/my-coupons' element={<ProtectedRoute><CreateCoupons/></ProtectedRoute>}/>
+          <Route path='/my-coupons/add' element={<ProtectedRoute><CreateCoupons/></ProtectedRoute>}/>
           {/* <Route path='' element={<Home/>}/> */}
         </Route>
       </Routes>

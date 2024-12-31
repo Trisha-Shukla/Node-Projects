@@ -7,6 +7,8 @@ import productRouter from "./routes/productRoute.js";
 import userRouter from "./routes/userRouter.js";
 import authRouter from "./routes/authRouter.js";
 import cartRouter from "./routes/cartRouter.js";
+import couponRouter from "./routes/couponRouter.js";
+
 
 
 const app=express();
@@ -28,6 +30,7 @@ app.use("/api/product",productRouter)
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter)
 app.use("/api/cart",cartRouter)
+app.use("/api/coupon",couponRouter)
 
 
 await connectToDB();

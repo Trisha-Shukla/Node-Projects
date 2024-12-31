@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "676d2ac9ed6422eb43b434a0"
+  },
+  "name": "MacBook Air M2",
+  "brand": "Apple",
+  "category": "Laptop",
+  "price": 119900,
+  "attributes": [
+    {
+      "name": "Processor",
+      "value": "Apple M2",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2ac9ed6422eb43b434a1"
+      }
+    },
+    {
+      "name": "RAM",
+      "value": "8GB",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2ac9ed6422eb43b434a2"
+      }
+    },
+    {
+      "name": "Storage",
+      "value": "256GB SSD",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2ac9ed6422eb43b434a3"
+      }
+    }
+  ],
+  "description": "Sleek and lightweight laptop powered by the M2 chip, featuring a 13.6-inch Retina display, 8GB RAM, and 256GB SSD storage.",
+  "inStock": true,
+  "inventory": 20,
+  "totalRating": 0,
+  "image": "https://res.cloudinary.com/dn9zrvh3y/image/upload/v1735207624/books/dfrmtcijll2lsxwdcmam.jpg",
+  "addedBy": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "uid": "O4X4mgOrIPOXmOtwhzgTp",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2024-12-26T10:07:05.324Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-26T10:07:05.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676d2b9fed6422eb43b434a9"
+  },
+  "name": "Samsung Galaxy S23 Ultra",
+  "brand": "Samsung",
+  "category": "Mobiles",
+  "price": 124999,
+  "attributes": [
+    {
+      "name": "Processor",
+      "value": "Snapdragon 8 Gen 2",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2b9fed6422eb43b434aa"
+      }
+    },
+    {
+      "name": "RAM",
+      "value": "12GB",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2b9fed6422eb43b434ab"
+      }
+    },
+    {
+      "name": "Storage",
+      "value": "256GB",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2b9fed6422eb43b434ac"
+      }
+    }
+  ],
+  "description": "Premium smartphone with a 200MP camera, Snapdragon 8 Gen 2 chipset, 12GB RAM, and 256GB storage.",
+  "inStock": true,
+  "inventory": 30,
+  "totalRating": 0,
+  "image": "https://res.cloudinary.com/dn9zrvh3y/image/upload/v1735207838/books/ddsyd3akjvmhbuqvnim8.jpg",
+  "addedBy": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "uid": "jXgK792DjShcwecBlcaEC",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2024-12-26T10:10:39.113Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-26T10:10:39.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676d2f5ded6422eb43b434ca"
+  },
+  "name": "Dior Sauvage Eau de Parfum",
+  "brand": "Christian Dior",
+  "category": "Beauty & Personal Care > Perfumes",
+  "price": 8500,
+  "attributes": [
+    {
+      "name": "Fragrance Type",
+      "value": "Woody & Spicy",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2f5ded6422eb43b434cb"
+      }
+    }
+  ],
+  "description": "A fresh, spicy, and aromatic fragrance inspired by the open desert. Perfect for any occasion.",
+  "inStock": true,
+  "inventory": 50,
+  "totalRating": 0,
+  "image": "https://res.cloudinary.com/dn9zrvh3y/image/upload/v1735208797/books/jamnmnlshq3bgqbkctcs.jpg",
+  "addedBy": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "uid": "Z05fwdzxKcksgzE8sK_Qc",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2024-12-26T10:26:37.671Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-26T10:26:37.671Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676d2fbded6422eb43b434ce"
+  },
+  "name": "Michael Kors Jet Set Tote",
+  "brand": "Michael Kors",
+  "category": "Handbags",
+  "price": 15999,
+  "attributes": [
+    {
+      "name": "Material",
+      "value": "Leather",
+      "keywords": [],
+      "_id": {
+        "$oid": "676d2fbded6422eb43b434cf"
+      }
+    }
+  ],
+  "description": "Stylish and spacious tote bag crafted from premium leather, perfect for work or casual outings.",
+  "inStock": true,
+  "inventory": 50,
+  "totalRating": 0,
+  "image": "https://res.cloudinary.com/dn9zrvh3y/image/upload/v1735208893/books/vjsymu33eo8t7h2vrnqw.jpg",
+  "addedBy": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "uid": "0VGy1x7kvZLH0ARfJ6Dr8",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2024-12-26T10:28:13.433Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-26T10:28:13.433Z"
+  },
+  "__v": 0
+}]

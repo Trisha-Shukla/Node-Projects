@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "67711f2860003f451d5c816b"
+  },
+  "user": {
+    "$oid": "676bd8f377f59ed3b1d3d6d0"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "676d2b9fed6422eb43b434a9"
+      },
+      "quantity": 6,
+      "productDetails": {
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": 124999,
+        "category": "Mobiles",
+        "brand": "Samsung",
+        "image": "https://res.cloudinary.com/dn9zrvh3y/image/upload/v1735207838/books/ddsyd3akjvmhbuqvnim8.jpg",
+        "_id": {
+          "$oid": "677128113a54c06765813fb1"
+        }
+      },
+      "_id": {
+        "$oid": "677128113a54c06765813fb0"
+      }
+    }
+  ],
+  "total": 749994,
+  "createdAt": {
+    "$date": "2024-12-29T10:06:32.976Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T12:35:45.911Z"
+  },
+  "__v": 2
+}]
