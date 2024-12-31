@@ -165,11 +165,12 @@ export async function login(request, response) {
 
     // Set cookie with JWT token
     response.cookie("token", token, {
-      httpOnly: true, //no other JS script will be able to see this on frontend
-      secure: true,
-      sameSite: "none",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
       maxAge: 24 * 60 * 60 * 1000,
     });
+
     const loggedInUser = {
         _id: user._id,
         name: user.name,

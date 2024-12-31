@@ -55,7 +55,7 @@ const Header = () => {
                     (visible && ( <div className='flex flex-col gap-3 absolute top-3 right-4 bg-gray-100 text-purple-700'>
                       {user?.role==="seller" && (
                       <>
-                      <Link to={`/my-products/${data._id}`}>My products</Link>
+                      {/* <Link to={`/my-products/${data._id}`}>My products</Link> */}
                       <Link to={'/add-product'}>Add Product</Link>  
                       </>)}
                       

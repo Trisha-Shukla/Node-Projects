@@ -1,12 +1,15 @@
 import { useState } from "react";
-import instance from "../axiosConfig";
-import { useCart } from "../hooks/useCart";
+import instance from "../axios.config";
+import {useDispatch} from 'react-redux'
+import { modifyCart } from "../store/cartSlice/cartSlice";
+
+
 
 function ApplyCoupon() {
   const [couponCode, setCouponCode] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { modifyCart } = useCart();
+  const dispatch=useDispatch();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -15,9 +18,10 @@ function ApplyCoupon() {
       const response = await instance.post("/coupon/apply", {
         code: couponCode,
       });
+      dispatch(modifyCart(response.data))
       // console.log(response);
-      modifyCart(response.data);
       setCouponCode("");
+      setError("")
     } catch (error) {
       setError(error.response?.data?.message || "Error applying coupon");
     } finally {

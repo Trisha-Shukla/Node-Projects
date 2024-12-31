@@ -1,21 +1,25 @@
 import { useEffect } from "react";
-
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCart, removeFromCart, updateQuantity } from "../store/cartSlice/cartSlice";
+import ApplyCoupon from "../components/ApplyCoupon";
 
 
 function Cart() {
-//   const { cart, fetchCart, updateQuantity, removeFromCart } = useCart();
-const dispatch=useDispatch();
-const cart=useSelector((state)=>state.cart.cart)
-console.log(cart);
+  console.log("cartrendered");
+  const navigate=useNavigate()
+  
+  const dispatch=useDispatch();
+  const cart=useSelector((state)=>state.cart.cart);
 
   useEffect(() => {
-    dispatch(fetchCart());
+    dispatch(fetchCart())
   }, []);
-
+  function proceedToCheckout() {
+    //TESTING / LOGIC
+    navigate("/checkout");
+  }
   //   console.log(cart);
 
   if (!cart || cart?.items?.length === 0) {
@@ -30,35 +34,34 @@ console.log(cart);
   }
 
   return (
-    
     <div className="container mx-auto px-8 py-4">
       <h1 className="text-2xl font-bold mb-6">Shopping Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items - Left Side */}
         <div className="lg:col-span-2 space-y-4">
-          {cart && cart?.items.length>0 && cart.items.map((item) => (
+          {cart.items.map((item) => (
             <div
-              key={item.productDetails._id}
+              key={item.product._id}
               className="border rounded-lg p-4 flex gap-4"
             >
               <img
-                src={item.productDetails.image}
-                alt={item.productDetails.name}
+                src={item.product.image}
+                alt={item.product.name}
                 className="w-24 h-24 object-cover rounded"
               />
               <div className="flex-1 space-y-2">
-                <h3 className="font-semibold">{item.productDetails.name}</h3>
-                <p className="text-gray-600">{item.productDetails.brand}</p>
+                <h3 className="font-semibold">{item.product.name}</h3>
+                <p className="text-gray-600">{item.product.brand}</p>
                 <p className="flex items-center font-bold">
                   <LiaRupeeSignSolid />
-                  {item.productDetails.price}
+                  {item.product.price}
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center border rounded">
                     <button
                       onClick={() =>
-                        dispatch(updateQuantity({productId:item.product._id,quantity: item.quantity - 1}))
+                       dispatch( updateQuantity({productId:item.product._id, quantity:item.quantity - 1}))
                       }
                       className="px-3 py-1 border-r"
                       disabled={item.quantity <= 1}
@@ -92,14 +95,15 @@ console.log(cart);
           <div className="border rounded-lg p-4 sticky top-4">
             <h2 className="text-xl font-bold mb-4">Order Summary</h2>
 
-            {/* <ApplyCoupon /> */}
+            <ApplyCoupon />
 
             <div className="space-y-2 pb-4 border-b">
               <div className="flex justify-between">
                 <span>Subtotal</span>
                 <span className="flex items-center font-bold">
                   <LiaRupeeSignSolid />
-                  {cart.total.toFixed(2)}
+                  {cart?.discountAmount?(cart.discountAmount+cart.total).toFixed(2):cart.total.toFixed(2)}
+                  
                 </span>
               </div>
 
@@ -119,10 +123,11 @@ console.log(cart);
               <span>Total</span>
               <span className="flex items-center">
                 <LiaRupeeSignSolid />
-                {Math.round(cart.total)}
+                {cart?.finalAmount?cart?.finalAmount:Math.round(cart.total)}
+                {/* {Math.round(cart.finalAmount)} */}
               </span>
             </div>
-            <button className="w-full bg-blue-500 text-white py-2 rounded">
+            <button className="w-full bg-blue-500 text-white py-2 rounded" onClick={proceedToCheckout}>
               Proceed to Checkout
             </button>
           </div>

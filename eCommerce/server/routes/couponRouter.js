@@ -5,7 +5,7 @@ import { isSeller } from "../middleware/isSeller.js";
 
 const couponRouter=Router();
 
-couponRouter.get("/",getCoupon);
+couponRouter.get("/",protectRoute,getCoupon);
 couponRouter.post("/create",protectRoute,isSeller,createCoupon);
 couponRouter.post("/apply",protectRoute,applyCoupon);
 

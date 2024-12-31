@@ -9,10 +9,15 @@ import { checkAuth } from './store/authSlice/authSlice'
 import Wishlist from './pages/Wishlist'
 import { getProduct } from './store/productSlice/productSlice'
 import CreateCoupons from './pages/CreateCoupon'
+import MyCoupons from './pages/MyCoupon'
+import CheckoutForm from './pages/CheckoutForm'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 
 
 function App() {
   const dispatch=useDispatch();
+  const StripePromise = loadStripe(import.meta.env.VITE_PUBLISH_KEY);
 
   useEffect(() => {
     dispatch(checkAuth());
@@ -21,7 +26,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Elements stripe={StripePromise}><Layout/></Elements>}>
           <Route index element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
@@ -32,8 +37,9 @@ function App() {
           <Route path='/product/:id' element={<ProtectedRoute><SingleProduct/></ProtectedRoute>}/>
           <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>}/>
           <Route path='/wishlist' element={<ProtectedRoute><Wishlist/></ProtectedRoute>}/>
-          <Route path='/my-coupons' element={<ProtectedRoute><CreateCoupons/></ProtectedRoute>}/>
+          <Route path='/my-coupons' element={<ProtectedRoute><MyCoupons/></ProtectedRoute>}/>
           <Route path='/my-coupons/add' element={<ProtectedRoute><CreateCoupons/></ProtectedRoute>}/>
+          <Route path='/checkout' element={<ProtectedRoute><CheckoutForm/></ProtectedRoute>}/>
           {/* <Route path='' element={<Home/>}/> */}
         </Route>
       </Routes>
