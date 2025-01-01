@@ -10,6 +10,7 @@ import cartRouter from "./routes/cartRouter.js";
 import couponRouter from "./routes/couponRouter.js";
 import paymentRouter from "./routes/paymentRouter.js";
 import orderRouter from "./routes/orderRouter.js";
+import blogRouter from "./routes/blogRouter.js";
 
 
 
@@ -36,7 +37,7 @@ app.use("/api/cart",cartRouter)
 app.use("/api/coupon",couponRouter)
 app.use("/api/pay", paymentRouter);
 app.use("/api/orders", orderRouter);
-
+app.use("/api/blog",blogRouter)
 
 await connectToDB();
 app.listen(port,()=>{console.log("Connected to Server");
