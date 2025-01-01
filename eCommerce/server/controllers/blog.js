@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import Blog from "../models/blog";
-import { uploadToCloudinary } from "../middleware/cloudinary";
+import Blog from "../models/blog.js";
+import { uploadToCloudinary } from "../middleware/cloudinary.js";
 
 
 
