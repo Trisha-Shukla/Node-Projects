@@ -49,7 +49,7 @@ This is an eCommerce platform API built using Node.js. The API provides function
 
 
 POST /api/users/register HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 
 {
@@ -76,7 +76,7 @@ Content-Type: application/json
 
 
 POST /api/users/register HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 
 {
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 
 POST /api/users/login HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 
 {
@@ -121,7 +121,7 @@ Content-Type: application/json
 
 
 POST /api/users/logout HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -134,7 +134,7 @@ Content-Type: application/json
 {
   "message": "User logged out successfully"
 }
-### 5.Get User Profile
+### 5.User Profile
 
 - **Endpoint:** `GET /api/user/profile`
 - **Description:** Retrieves the authenticated user's profile information.
@@ -142,7 +142,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/users/profile HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 
 
@@ -158,7 +158,7 @@ Content-Type: application/json
   "email": "johndoe@example.com",
   "createdAt": "2023-01-01T12:00:00Z"
 }
-### 6.Edit User Profile
+### 6.User Edit Profile
 
 - **Endpoint:** `PUT /api/user/profile`
 - **Description:** Updates the authenticated user's profile information.
@@ -166,7 +166,7 @@ Content-Type: application/json
 **Example Request:**
 
 PUT /api/users/profile HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -191,7 +191,7 @@ Content-Type: application/json
   }
 }
 
-### 7. Add User's Wishlist
+### 7. Add Wishlist
 
 - **Endpoint:** `POST /api/user/wishList/add`
 - **Description:** Adds a product to the authenticated user's wish list.
@@ -200,7 +200,7 @@ Content-Type: application/json
 
 
 POST /api/users/wishList/add HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -224,7 +224,7 @@ Content-Type: application/json
   ]
 }
 
-### 8. Edit User Profile
+### 8. Remove Wishlist
 
 - **Endpoint:** `POST /api/user/wishList/remove`
 - **Description:** Removes a product from the authenticated user's wish list.
@@ -233,7 +233,7 @@ Content-Type: application/json
 
 
 POST /api/users/wishList/remove HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -262,7 +262,7 @@ Content-Type: application/json
 
 
 GET /api/products HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 
 
 HTTP/1.1 200 OK
@@ -311,7 +311,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/products/1 HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 
 
 {
@@ -341,7 +341,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/product/add HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 Authorization: Bearer your_jwt_token
 
@@ -368,7 +368,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/cart HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 Authorization: Bearer your_jwt_token
 
@@ -396,7 +396,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/cart HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 
 
@@ -425,7 +425,7 @@ Content-Type: application/json
 **Example Request:**
 
 PUT /api/cart/update HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -463,7 +463,7 @@ Content-Type: application/json
 **Example Request:**
 
 DELETE /api/cart/remove HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -498,7 +498,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/auth/verifyToken HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 
 {
@@ -524,7 +524,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/auth/validate-token HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 
 
@@ -550,7 +550,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/coupons/ HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 
 
@@ -581,7 +581,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/coupons/create HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -616,7 +616,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/coupons/apply HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -644,7 +644,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/payments/create-payment-intent HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Content-Type: application/json
 
 {
@@ -669,7 +669,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/orders/create HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -703,7 +703,7 @@ Content-Type: application/json
 **Example Request:**
 
 POST /api/blogs/add HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: multipart/form-data
 
@@ -727,7 +727,7 @@ Content-Type: application/json
     "blogId": "1",
     "title": "My First Blog",
     "content": "This is the content of the blog.",
-    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "imageUrl": "https://https://geekecom.onrender.com/uploads/image.jpg",
     "createdAt": "2024-12-29T12:34:56Z"
   }
 }
@@ -740,7 +740,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/blogs/get HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 
 
 **Example  Response:**
@@ -753,7 +753,7 @@ Content-Type: application/json
     "blogId": "1",
     "title": "My First Blog",
     "content": "This is the content of the blog.",
-    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "imageUrl": "https://https://geekecom.onrender.com/uploads/image.jpg",
     "createdAt": "2024-12-29T12:34:56Z"
   },
   {
@@ -773,7 +773,7 @@ Content-Type: application/json
 **Example Request:**
 
 GET /api/blogs/get/1 HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 
 
 
@@ -786,7 +786,7 @@ Content-Type: application/json
   "blogId": "1",
   "title": "My First Blog",
   "content": "This is the content of the blog.",
-  "imageUrl": "https://your-domain.com/uploads/image.jpg",
+  "imageUrl": "https://https://geekecom.onrender.com/uploads/image.jpg",
   "createdAt": "2024-12-29T12:34:56Z"
 }
 
@@ -798,7 +798,7 @@ Content-Type: application/json
 **Example Request:**
 
 DELETE /api/blogs/delete/1 HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 
 
 **Example  Response:**
@@ -818,7 +818,7 @@ Content-Type: application/json
 **Example Request:**
 
 PUT /api/blogs/update/1 HTTP/1.1
-Host: your-domain.com
+Host: https://geekecom.onrender.com
 Authorization: Bearer your_jwt_token
 Content-Type: application/json
 
@@ -840,7 +840,7 @@ Content-Type: application/json
     "blogId": "1",
     "title": "Updated Blog Title",
     "content": "Updated blog content.",
-    "imageUrl": "https://your-domain.com/uploads/image.jpg",
+    "imageUrl": "https://https://geekecom.onrender.com/uploads/image.jpg",
     "updatedAt": "2024-12-29T14:00:00Z"
   }
 }
