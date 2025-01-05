@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 const Feed = () => {
   const {tweets}=useSelector(state=>state.tweetData)
   return (
-    <div className='w-[40%]'>
+    <div className='lg:w-[40%] w-full'>
       <CreatePost/>
       {
         tweets?.map((tweet)=>
