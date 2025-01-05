@@ -31,7 +31,7 @@ const LeftSideBar = () => {
     }
 
   return (
-    <div className='w-[20%]'>
+    <div className='w-[20%] hidden lg:block'>
       <div>
         {/* logo */}
         <div className='ml-5'>
