@@ -7,7 +7,7 @@ This documentation provides a detailed overview of the API endpoints for the Twi
 ## Base URL
 
 ```
-https://twitter-clone-ts.onrender.com/api/v1/user/register/api/vi
+https://twitter-clone-ts.onrender.com/api/v1
 ```
 
 Replace `https://twitter-clone-ts.onrender.com/api/v1` with the URL where the server is hosted.
