@@ -8,7 +8,7 @@ import { getUser } from '../store/userSlice.js';
 
 
 const Login = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
