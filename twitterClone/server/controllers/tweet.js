@@ -63,14 +63,14 @@ export async function likeOrDislike(req,res){
         if(tweet.like.includes(userId)){
             await Tweet.findByIdAndUpdate(tweetId,{$pull:{like:userId}})
             return res.status(200).send({
-                message:"User disliked your Tweet",
+                message:"You liked a tweet",
                 success:true,
             })
         }
         else{
             await Tweet.findByIdAndUpdate(tweetId,{$push:{like:userId}})
             return res.status(200).send({
-                message:"User liked your Tweet",
+                message:"You disliked a tweet",
                 success:true,
             })
         }    

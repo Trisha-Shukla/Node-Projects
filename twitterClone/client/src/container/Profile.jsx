@@ -26,7 +26,6 @@ const Profile = () => {
             axios.defaults.withCredentials = true;
             const res = await axios.post(`${USER_API_END_POINT}/follow/${id}`, {});
             console.log(res);
-            setRefresh(!refresh)
             dispatch(followingUpdate(id))
             dispatch(getRefresh())
             toast.success(res?.data?.message);
