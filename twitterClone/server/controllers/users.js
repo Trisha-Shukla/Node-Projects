@@ -75,8 +75,8 @@ export async function login(req,res){
 
         return res.status(201).cookie("token", token, { 
             httpOnly: true,
-        secure: process.env.NODE_ENV === "production", // Use secure cookies in production
-        sameSite: "strict", // Prevent CSRF
+        secure: true, // Use secure cookies in production
+        sameSite: "none", // Prevent CSRF
         maxAge: 24 * 60 * 60 * 1000, // 1 day
          }).json({
             message: `Welcome back ${user.name}`,

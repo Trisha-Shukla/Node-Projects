@@ -12,18 +12,12 @@ import { getRefresh } from '../store/tweetSlice';
 
 
 const Profile = () => {
+
     const { id } = useParams();
     const dispatch=useDispatch()
     useGetProfile(id)
     const {  profile,user } = useSelector(store => store.userData);
 
-    // const getUser=()=>{
-    //     try {
-    //         const await=axios.get()
-    //     } catch (error) {
-            
-    //     }
-    // }
 
 
 
@@ -32,6 +26,7 @@ const Profile = () => {
             axios.defaults.withCredentials = true;
             const res = await axios.post(`${USER_API_END_POINT}/follow/${id}`, {});
             console.log(res);
+            setRefresh(!refresh)
             dispatch(followingUpdate(id))
             dispatch(getRefresh())
             toast.success(res?.data?.message);
